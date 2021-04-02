@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
 import config from "config";
+import dotenv from "dotenv";
 
-const db = config.get("connection_url");
+// const db = config.get("connection_url");
+dotenv.config()
+const connection_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.o3f44.mongodb.net/whatsappdb?retryWrites=true&w=majority`
 
 const connectDB = async () => {
     try {
         await mongoose
-            .connect(db, {
+            // .connect(db, {
+            .connect(connection_url, {
             useCreateIndex: true,
             useNewUrlParser: true,
             useUnifiedTopology: true
