@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "author": "Berkay",
   "license": "ISC",
@@ -17,6 +18,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.10.0",
     "mongoose": "^5.12.3",
-    "pusher": "^5.0.0"
+    "netlify-lambda": "^2.0.3",
+    "pusher": "^5.0.0",
+    "serverless-http": "^2.7.0"
   }
 }
