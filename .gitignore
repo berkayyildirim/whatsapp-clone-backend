@@ -2,4 +2,6 @@ node_modules
 
 ./config/default.json
 
-config/
+config/default.json
+
+config/*
