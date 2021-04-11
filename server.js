@@ -24,12 +24,6 @@ app.use(express.json());
 app.use(cors());
 
 // DB config
-// const connection_url = "mongodb+srv://berkayyildirim:123456Aa@cluster0.o3f44.mongodb.net/whatsappdb?retryWrites=true&w=majority"
-// mongoose.connect(connection_url, {
-//     useCreateIndex: true,
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// })
 connectDB();
 
 // ???
